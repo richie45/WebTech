@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Web Forms</title>
+
+    <style type="text/css">
+     table {margin-right:auto; margin-left:auto; width:600px;}
+    form {margin-top:50px; margin-bottom:100px; padding-top:20px; padding-right:50px; padding-bottom: 20px; padding-left: 100px; font-family:arial; color:navy; background-color:silver;}
+    h1 {font-family:Lucida Bright; text-align:center; color:navy;}
+    </style>
+</head>
+<body>
+    <h1>Web Forms - CS08-InClass</h1>
+    <form>
+        <table>
+        <tr><td magin:20>Last Name:<input type="text" name="lastname" maxlength="100" size="20"> First name:<input type="text" name="firstname" maxlength="100" size="20"></td></tr>
+        <tr><td>Gender: Male <input type="radio" name="gender" value="male" /> Female <input type="radio" name="gender" value="female"/></td></tr>
+        <tr><td>My favorite Web Tech topics are</td></tr>
+        <tr><td><input type="checkbox" name="Q1" value="Baisc HTML" />Basic HTML</td></tr>
+        <tr><td><input type="checkbox" name="Q1" value="CSS" />CSS</td></tr>
+        <tr><td><input type="checkbox" name="Q1" value="Tables" />Tables</td></tr>
+        <tr><td><input type="checkbox" name="Q1" value="FORMS" />FORMS</td></tr>
+        <tr><td><input type="submit" value="Submit" name="Submit" /> <input type="reset" value="Reset" name="Reset" /></tr></td>
+        <tr><td>What grade do you expect to receive?</tr></td>
+        <tr><td><select name="grade">
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option></select></tr></td>
+            
+        <tr><td>What grade do you expect to receive?</tr></td>
+        <tr><td>Please add any comments you have</tr></td>  
+        <tr><td><textarea name="comments" rows="5" cols="29"></textarea></tr></td>
+        <tr><td><button type="submit" name="submit" value="submit"> SUBMIT <img src="mailbox.png" height="30"alt="submit_button" /></button>
+                <button type="clear" name="clear" value="clear"> CLEAR <img src="reset.png" height="30"alt="clear_button" /></button></tr></td>
+        </table>
+    </form>
+    
+</body>
+</html>
