@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+<html> 
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+   <title>Contact Page</title> 
+   <style type="text/css">
+    html {background: url(league1.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;}
+      
+    h1 {text-align: center;
+      font-size:60px;
+      color:grey;}
+    
+    a {color:white;}
+
+    h2 {color:white;}
+    h3 {color:white;}
+    p {color:white;}
+
+   </style>
+   <script>
+   </script>
+      
+</head>
+
+<body>
+<h1>Curious About More League?</h1>   
+
+<div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="contact page.html">Contact Page</a>
+        <a href="sitemap.html">Site Map</a>
+        <a href="Champion overview.html">Champion Overview</a>
+        <a href="LOL guide.html">Beginner's Guide</a>
+        <a href="Rank Overview.html">Rank Overview</a>
+        <div class="dropdown">
+          <div class="dropdown-content">
+              <a href="Ranking Up.html">Tips on Ranking Up</a>
+          </div>
+        </div> 
+      </div>
+      <br>
+
+<h2>Contact</h2> 
+<form method="post" action="mailer.php" id="form1" onsubmit="return processForm()">
+    
+<h3>Contact Information</h3> 
+  
+     <p>First Name: <input type= "text" maxlength="100"/></p>
+     <p>Last Name: <input type= "text" maxlength="100"/></p>
+   <p>Email Address: <input type= "text" maxlength="100"/></p>
+     </select>
+
+<h3>Survey</h3>
+<div>
+<p>Like Website?</p> 
+<p>Yes <input type="radio" value="yes" />
+No <input type="radio" value="no"/></p>
+</div>
+<br>
+<p>Any Comments</p>
+<textarea name="comments" rows="10" cols="50">
+</textarea> 
+<br/>
+
+<table>   
+   <tr>
+      <td>
+         <input id="submit1" type="submit" value="Submit" name="Submit"/>
+      </td>
+   </tr>
+</table>   
+    
+</form>
+
+
+</body>
+</html>
