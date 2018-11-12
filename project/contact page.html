@@ -6,25 +6,92 @@
    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
    <title>Contact Page</title> 
    <style type="text/css">
-    html {background: url(league1.jpg) no-repeat center center fixed; 
+
+    html {background: url(lol.png) no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;}
-      
-    h1 {text-align: center;
-      font-size:60px;
-      color:grey;}
+        background-size: cover;} 
     
-    a {color:white;}
+    h1 {text-align: center;
+        font-size: 70px;
+        color:darkgoldenrod;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+    
+    h2 {font-size: 23px;
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+    
+    h3 {color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
-    h2 {color:white;}
-    h3 {color:white;}
-    p {color:white;}
+    p {color: white;}
+
+      .navbar {overflow: hidden;
+        background-color: #333;
+        font-family: Arial, Helvetica, sans-serif;}
+
+    .navbar a {float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;}
+
+    .dropdown {float: left;
+        overflow: hidden;
+        text-align:center;}
+
+    .dropdown .dropbtn {cursor: pointer;
+        font-size: 16px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        text-align:center;}
+    
+    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {background-color: red;}
+
+    .dropdown-content {display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align:center;}
+
+    .dropdown-content a {float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;}
+
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .show {display: block;}
+
+    .video {text-align: center;}
 
    </style>
-   <script>
-   </script>
+
+    <script type="text/javascript">
+
+      function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");}
+  
+      window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      let myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');}
+          }
+      }
+  </script>
+     
       
 </head>
 
@@ -32,19 +99,23 @@
 <h1>Curious About More League?</h1>   
 
 <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="contact page.html">Contact Page</a>
-        <a href="sitemap.html">Site Map</a>
-        <a href="Champion overview.html">Champion Overview</a>
-        <a href="LOL guide.html">Beginner's Guide</a>
-        <a href="Rank Overview.html">Rank Overview</a>
-        <div class="dropdown">
-          <div class="dropdown-content">
-              <a href="Ranking Up.html">Tips on Ranking Up</a>
+    <h3><a href="index.html">Home</a></h3>
+    <h3><a href="contact page.html">Contact Page</a></h3>
+    <h3><a href="Champion overview.html">Champion Overview</a></h3>
+    <h3><a href="LOL guide.html">Beginner's Guide</a></h3>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Rank
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="Rank Overview.html">Rank Overview</a>
+            <a href="Ranking Up.html">Tips on Ranking Up</a>
+            </div>
           </div>
-        </div> 
-      </div>
-      <br>
+          <h3><a href="credit.html">Credit Page</a></h3> 
+        </div>
+        <br>
+
 
 <h2>Contact</h2> 
 <form method="post" action="mailer.php" id="form1" onsubmit="return processForm()">
