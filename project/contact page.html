@@ -20,57 +20,36 @@
     
     h2 {font-size: 23px;
         color: white;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align:center;}
     
     h3 {color: white;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
-
-    p {color: white;}
-
-      .navbar {overflow: hidden;
-        background-color: #333;
-        font-family: Arial, Helvetica, sans-serif;}
-
-    .navbar a {float: left;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;}
-
-    .dropdown {float: left;
-        overflow: hidden;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align:center;}
 
-    .dropdown .dropbtn {cursor: pointer;
-        font-size: 16px;    
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        text-align:center;}
+    p {color: white;
+        text-align:center;
+        font-size:15px;}
     
-    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {background-color: red;}
+    td {text-align: center;}
 
-    .dropdown-content {display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        text-align:center;}
+    form {text-align: center;}
 
-    .dropdown-content a {float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;}
+    .topnav {overflow: hidden;
+        background-color: #333;}
 
-    .dropdown-content a:hover {background-color: #ddd;}
+    .topnav a {float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;}
+
+    .topnav a:hover {background-color: red;
+    color: white;}
+
+    .topnav a.active {background-color: #4CAF50;
+    color: white;}
 
     .show {display: block;}
 
@@ -98,33 +77,33 @@
 <body>
 <h1>Curious About More League?</h1>   
 
-<div class="navbar">
-    <h3><a href="index.html">Home</a></h3>
-    <h3><a href="contact page.html">Contact Page</a></h3>
-    <h3><a href="Champion overview.html">Champion Overview</a></h3>
-    <h3><a href="LOL guide.html">Beginner's Guide</a></h3>
-    <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Rank
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-            <a href="Rank Overview.html">Rank Overview</a>
-            <a href="Ranking Up.html">Tips on Ranking Up</a>
-            </div>
-          </div>
-          <h3><a href="credit.html">Credit Page</a></h3> 
-        </div>
-        <br>
+<div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="Champion overview.html">Champion Overview</a>
+        <a href="LOL guide.html">Beginner's Guide</a>
+        <a href="Rank Overview.html">Rank Overview</a>
+        <a href="Ranking Up.html">Tips on Ranking Up</a>
+        <a href="contact page.html">Contact Page</a>
+        <a href="credit.html">Credit Page</a>
+        <a href="sitemap.html">Site Map</a>
+    </div>
+<br>
 
-
-<h2>Contact</h2> 
 <form method="post" action="mailer.php" id="form1" onsubmit="return processForm()">
+<h2>My Contact Information</h2>
+    <p>Name: Richard Park
+    <br>Phone: 857-320-5501
+    <br>Email: gpark6@babson.edu
+    <br>Address: 21 Babson College Dr, Babson Park, MA, 02457
+    <br>League IGN: richongunny
+</p>
+<hr>
     
-<h3>Contact Information</h3> 
+<h2>Leave Your Contact</h2> 
   
      <p>First Name: <input type= "text" maxlength="100"/></p>
      <p>Last Name: <input type= "text" maxlength="100"/></p>
-   <p>Email Address: <input type= "text" maxlength="100"/></p>
+     <p>Email Address: <input type= "text" maxlength="100"/></p>
      </select>
 
 <h3>Survey</h3>
@@ -134,21 +113,16 @@
 No <input type="radio" value="no"/></p>
 </div>
 <br>
-<p>Any Comments</p>
-<textarea name="comments" rows="10" cols="50">
+<p>Please Add Any Comments</p>
+<textarea name="comments" rows="15" cols="75">
 </textarea> 
 <br/>
 
-<table>   
-   <tr>
-      <td>
-         <input id="submit1" type="submit" value="Submit" name="Submit"/>
-      </td>
-   </tr>
-</table>   
-    
+
+       <p><input id="submit1" type="submit" value="Submit" name="Submit"/></p>
+
+<br>
+<br>
 </form>
-
-
 </body>
 </html>

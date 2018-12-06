@@ -22,54 +22,26 @@
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
     
     h3 {color: white;
+        font-size:23px;
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
     p {color: white;}
     
-    .navbar {overflow: hidden;
-        background-color: #333;
-        font-family: Arial, Helvetica, sans-serif;}
+    .topnav {overflow: hidden;
+        background-color: #333;}
 
-    .navbar a {float: left;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;}
+    .topnav a {float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;}
 
-    .dropdown {float: left;
-        overflow: hidden;
-        text-align:center;}
+    .topnav a:hover {background-color: red;
+    color: white;}
 
-    .dropdown .dropbtn {cursor: pointer;
-        font-size: 16px;    
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        text-align:center;}
-    
-    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {background-color: red;}
-
-    .dropdown-content {display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        text-align:center;}
-
-    .dropdown-content a {float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;}
-
-    .dropdown-content a:hover {background-color: #ddd;}
+    .topnav a.active {background-color: #4CAF50;
+    color: white;}
 
     .show {display: block;}
 
@@ -95,8 +67,13 @@
     let myDropdown = document.getElementById("myDropdown");
     if (myDropdown.classList.contains('show')) {
         myDropdown.classList.remove('show');}
-        }
-    }
+        }}
+
+    function mouseover()
+		{document.getElementById("lol").src="rankup.jpg"}
+	function back()
+		{document.getElementById("lol").src ="tiers2.png"}
+
 </script>
 
 </head>
@@ -104,69 +81,70 @@
 <body>
 <h1>League of Legends Rank Overview</h1>   
 
+<div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="Champion overview.html">Champion Overview</a>
+        <a href="LOL guide.html">Beginner's Guide</a>
+        <a href="Rank Overview.html">Rank Overview</a>
+        <a href="Ranking Up.html">Tips on Ranking Up</a>
+        <a href="contact page.html">Contact Page</a>
+        <a href="credit.html">Credit Page</a>
+        <a href="sitemap.html">Site Map</a>
+</div>
+<br><br>
 
-<div class="navbar">
-    <h3><a href="index.html">Home</a></h3>
-    <h3><a href="contact page.html">Contact Page</a></h3>
-    <h3><a href="Champion overview.html">Champion Overview</a></h3>
-    <h3><a href="LOL guide.html">Beginner's Guide</a></h3>
-    <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Rank
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-            <a href="Rank Overview.html">Rank Overview</a>
-            <a href="Ranking Up.html">Tips on Ranking Up</a>
-            </div>
-          </div>
-          <h3><a href="credit.html">Credit Page</a></h3> 
-        </div>
-        <br>
-    
     <h2>League Overview</h2>
     <p>Unlike Normal games where players can enjoy the game without much intense competition, Ranked games are considered as competitive matches that help measure your ladder on the server. There are in total 7 divisions in League: Bronze, Silver, Gold, Platinum, Diamond, Master, and Challenger. Each division has 5 tiers (I,II,III,IV,V with V being the lowest tier in the division). If a player wins a ranked game, he/she will earn LPs. Vice versa for losing. Once the player reaches 100lp in his tier, he gets into series that will determine the promotion to next tier or division. Promotion series to higher division requires at least 3 wins out of 5 games. Promotion series to higher tier, though, requires at least 2 wins out of 3 games. On the other hand, when the player reaches 0 LP, they have a high chance of being demoted to a lower tier or division if they lose the next game(s).</p>
     
-    <p style="text-align:center"><img src="tiers2.png" alt="ranks" title="ranks" height="300" width="700"/></p>
+    <p style="text-align:center">
+        <img src="tiers2.png" alt="lol" id="lol" width="700" height="400" onMouseOver="mouseover()" onMouseOut="back()">
+    </p>
       
-    <h3 class="bronze">Bronze<img src="bronze.png" alt="bronze" title="bronze" width="20" height="20"/></h3>
-     <p> 7 million players (21% of the active player base) across all servers</p>
-     <p> Bronze I is the most common division in the league, with 1.55 million players globally</p>
-     <p> Bronze V is the least common division in the league, containing 700,000 players globally</p>
-     <p> Bronze is considered by some players to be the hardest league to get out of, due to the high number of trolls and griefers</p>
-     <p> The average KDA in Bronze is 2.29 which comes from an average of 6.37 Kills, 6.8 Deaths and 9.21 Assists.</p>
+    <h3 class="bronze">Bronze<img src="bronze.png" alt="bronze" title="bronze" width="30" height="30"/></h3>
+     <p>- 7 million players (21% of the active player base) across all servers</p>
+     <p>- Bronze I is the most common division in the league, with 1.55 million players globally</p>
+     <p>- Bronze V is the least common division in the league, containing 700,000 players globally</p>
+     <p>- Bronze is considered by some players to be the hardest league to get out of, due to the high number of trolls and griefers</p>
+     <p>- The average KDA in Bronze is 2.29 which comes from an average of 6.37 Kills, 6.8 Deaths and 9.21 Assists.</p>
+     <br><br>
       <h3 class="silver">Silver<img src="silver.png" alt="silver" title="silver" width="30" height="30"/></h3> 
-    <p> 1 million players (45% of the active player base) across all servers</p>
-    <p> Silver V is the most common division in the league, with 3.5 million players globally</p>
-    <p> Silver I is the least common division in the league, with 1.5 million players globally</p>
-    <p> Silver is the most common league in League of Legends, with around double the number of players of the next most common.</p>
-    <p> The average KDA in Silver is 2.46 which comes from an average of 6.23 Kills, 6.24 Deaths and 9.15 Assists.</p>
+    <p>- 1 million players (45% of the active player base) across all servers</p>
+    <p>- Silver V is the most common division in the league, with 3.5 million players globally</p>
+    <p>- Silver I is the least common division in the league, with 1.5 million players globally</p>
+    <p>- Silver is the most common league in League of Legends, with around double the number of players of the next most common.</p>
+    <p>- The average KDA in Silver is 2.46 which comes from an average of 6.23 Kills, 6.24 Deaths and 9.15 Assists.</p>
+    <br><br>
       <h3 class="gold">Gold<img src="gold.png" alt="gold" title="gold" width="30" height="30"/></h3>
-    <p> 5 million players (24% of the active player base) across all servers</p>
-    <p>Gold V is by far the most common division in the league, with 2.8 million players globally</p>
-    <p>Gold I is the least common division in the league, with 450,000 players globally</p>
-    <p>Gold is the aim for many League of Legends players, as players must be in at least division Gold V to receive the unique end of season reward skins</p>
-    <p>The average KDA in Gold is 2.55 which comes from an average of 6.08 Kills, 5.9 Deaths and 8.96 Assists.</p>
+    <p>- 5 million players (24% of the active player base) across all servers</p>
+    <p>- Gold V is by far the most common division in the league, with 2.8 million players globally</p>
+    <p>- Gold I is the least common division in the league, with 450,000 players globally</p>
+    <p>- Gold is the aim for many League of Legends players, as players must be in at least division Gold V to receive the unique end of season reward skins</p>
+    <p>- The average KDA in Gold is 2.55 which comes from an average of 6.08 Kills, 5.9 Deaths and 8.96 Assists.</p>
     <p style="text-align:center"><img src="LOLRanks.jpg" alt="ranks" title="ranks" height="250" width="600"/></p>
+
       <h3 class="platinum">Platinum<img src="platinum.png" alt="platinum" title="platinum" width="30" height="30"/></h3>
-    <p>1 million players (8% of the active player base) across all servers</p>
-    <p>Platinum V is the most common division, with 1.2 million players globally</p>
-    <p>Platinum I is the least common division, with 110,000 players globally</p>
-    <p>Many players consider platinum to be a highly toxic division, full of players who think they should be Diamond but aren’t quite good enough. The phrase “ELO Hell” is most commonly used to describe players stuck in Platinum5</p>
-    <p>The average KDA in Platinum is 2.57 which comes from an average of 5.79 Kills, 5.61 Deaths and 8.65 Assists.</p>
+    <p>- 1 million players (8% of the active player base) across all servers</p>
+    <p>- Platinum V is the most common division, with 1.2 million players globally</p>
+    <p>- Platinum I is the least common division, with 110,000 players globally</p>
+    <p>- Many players consider platinum to be a highly toxic division, full of players who think they should be Diamond but aren’t quite good enough. The phrase “ELO Hell” is most commonly used to describe players stuck in Platinum5</p>
+    <p>- The average KDA in Platinum is 2.57 which comes from an average of 5.79 Kills, 5.61 Deaths and 8.65 Assists.</p>
+    <br><br>
       <h3 class="diamond">Diamond<img src="diamond.png" alt="diamond" title="diamond" width="30" height="30"/></h3>
-      <p>650,000 players (2% of the active player base) across all servers</p>
-      <p>Diamond V is the most common division in the league, with 450,000 players globally</p>
-      <p>Diamond I is the least common division, with 27,000 players globally</p>
-      <p>Many pros play in high Diamond divisions. It is not uncommon to play with/against professional League of Legends players in Diamond I or Diamond II.</p>
-      <p>The average KDA in Diamond is 2.59 which comes from an average of 5.32 Kills, 5.24 Deaths and 8.25 Assists.</p>
+      <p>- 650,000 players (2% of the active player base) across all servers</p>
+      <p>- Diamond V is the most common division in the league, with 450,000 players globally</p>
+      <p>- Diamond I is the least common division, with 27,000 players globally</p>
+      <p>- Many pros play in high Diamond divisions. It is not uncommon to play with/against professional League of Legends players in Diamond I or Diamond II.</p>
+      <p>- The average KDA in Diamond is 2.59 which comes from an average of 5.32 Kills, 5.24 Deaths and 8.25 Assists.</p>
+      <br><br>
       <h3 class="master">Master<img src="master.png" alt="master" title="master" width="30" height="30"/></h3>
-      <p>1,015 players (0.04% of the active player base) across all servers.</p>
-      <p>Many pros player in Master Tier and it’s not uncommon for high master tier players to be approached to play on professional teams.</p>
-      <p>The average KDA in master is 2.7 which comes from an average of 4.94 Kills, 4.67 Deaths and 8 Assists.</p>
+      <p>- 1,015 players (0.04% of the active player base) across all servers.</p>
+      <p>- Many pros player in Master Tier and it’s not uncommon for high master tier players to be approached to play on professional teams.</p>
+      <p>- The average KDA in master is 2.7 which comes from an average of 4.94 Kills, 4.67 Deaths and 8 Assists.</p>
+      <br><br>
       <h3 class="challenger">Challenger<img src="challenger.png" alt="challenger" title="challenger" width="30" height="30"/></h3>
-      <p>This is only the top 200 players in each Region which means it’s a tiny percentage of the global player base.</p>
-      <p>It’s not uncommon for a professional player to have multiple accounts in Challenger at once. At one point WildTurtle had 4 Accounts in Challenger. His main account and three League of Legends smurf accounts.</p>
-      <p>The average KDA in challenger is 2.79 which comes from an average of 5.3 Kills, 4.65 Deaths and 7.7 Assists.</p>
+      <p>- This is only the top 200 players in each Region which means it’s a tiny percentage of the global player base.</p>
+      <p>- It’s not uncommon for a professional player to have multiple accounts in Challenger at once. At one point WildTurtle had 4 Accounts in Challenger. His main account and three League of Legends smurf accounts.</p>
+      <p>- The average KDA in challenger is 2.79 which comes from an average of 5.3 Kills, 4.65 Deaths and 7.7 Assists.</p>
       
 <p style="text-align:center"><img src="Rank ppl.jpg" alt="rank" title="rank" height="400" width="800"/></p>
 
